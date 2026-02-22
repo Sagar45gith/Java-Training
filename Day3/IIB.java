@@ -21,8 +21,8 @@ public class IIB{
     }
     public static void main(String[] args){
         IIB ob = new IIB();
-        IIB ob1 = new IIB();
-        IIB ob2 = new IIB();
+        //IIB ob1 = new IIB();
+        //IIB ob2 = new IIB();
         //System.out.println()
         ob.display();
     }
