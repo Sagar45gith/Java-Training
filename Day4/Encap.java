@@ -55,6 +55,6 @@ public class Encap{
         ob.setPower("Lawyerr");
         ob.display();
         System.out.println(ob.getName());
-        System.out.println(ob.getPower());
+        System.out.println(ob.getPower()); 
     }
 }
