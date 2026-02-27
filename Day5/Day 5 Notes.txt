@@ -1,0 +1,81 @@
+
+Strings Pool
+1. Compare ( == ): compares object created at certain address
+2. .equals : compares the content of the string
+3. String pool: a special memory area where string literals are stored. When a string literal is created, it is stored in the string pool. 
+If another string literal with the same content is created, it will reference the same memory location in the string pool, rather than creating a new object.
+
+intern() method: returns a canonical representation for the string object. It returns a reference to the string object from the string pool if it is already present, 
+otherwise it adds the string to the pool and returns a reference to it.
+
+coverts heap memory string to string pool memory. If the string is already present in the pool, it returns the reference to that string. If not, it adds the string to the pool and returns the reference to it.
+
+
+StringBuilder: StringBuilder is a mutable sequence of characters. It is used to create and manipulate strings that can be modified after they are created. It provides methods for appending, inserting, deleting, and modifying characters in the string. StringBuilder
+is more efficient than String when it comes to concatenation and modification of strings, as it does not create a new object every time a string is modified. Instead, it modifies the existing object in place.
+
+StringBuffer: StringBuffer is similar to StringBuilder, but it is thread-safe. It is used in multi-threaded environments where multiple threads may access and modify the same string. 
+StringBuffer provides synchronized methods for appending, inserting, deleting, and modifying characters in the string, ensuring that only one thread can access the string at a time. However, StringBuffer is less efficient than StringBuilder due to the overhead of synchronization.
+
+String builder is faster than StringBuffer because it is not synchronized, while StringBuffer is thread-safe but slower due to synchronization overhead. 
+If you are working in a single-threaded environment, it is recommended to use StringBuilder for better performance. However, if you are working in a multi-threaded environment where multiple threads may access and modify the same string, it is recommended to use StringBuffer for thread safety.
+
+
+MultiThreading: Multi-threading is a programming technique that allows multiple threads to run concurrently within a single process. Each thread represents a separate path of execution, allowing for tasks to be performed simultaneously.
+start method: used to start a thread. When the start() method is called, the thread is moved from the new state to the runnable state, and the run() method is executed in a separate thread of execution.
+run method: contains the code that defines the behavior of the thread. It is called when the thread is started using the start() method. 
+The run() method can be overridden to define the specific behavior of the thread. When the run() method is executed, it runs in a separate thread of execution, allowing for concurrent processing.
+
+Join: The join() method is used to wait for a thread to complete its execution. When the join() method is called on a thread, the calling thread will be blocked until the thread on which join() was called has finished executing.
+This is useful when you want to ensure that a thread has completed its task before proceeding with the next 
+
+throw: The throw keyword is used to explicitly throw an exception in Java. It is followed by an instance of the Throwable class or its subclasses. When a throw statement is executed, the specified exception is thrown and can be caught by a corresponding catch block.
+
+
+INheritance, Association, Aggregation, Composition,
+                    Realtionship       Type            Dependency
+                    --------------     -------------   ----------------
+Inheritance          IS-A              Strong         Parent-child relationship where the child class inherits properties and behaviors from the parent class.
+Association          uses-A            Weak           A relationship where one class has a reference to another class, Independednt of the lifecycle of the other class.
+Aggregation          has-A             Weak           A relationship where one class contains a reference to another class, but the contained class can exist independently of the container class.
+Composition          contains-A        Strong         A relationship where one class contains a reference to another class, and the contained class cannot exist independently of the container class. If the container class is destroyed, the contained class is also destroyed.
+
+
+IS-A: Inheritance is a fundamental object-oriented programming concept where a new class (called a child or subclass) is created
+uses-A: Association is a relationship between two classes where one class uses or interacts with another class. It represents a "has-a" relationship, where one class has a reference to another class. The lifecycle of the associated class is independent of the class that uses it.
+
+
+Final: The final keyword in Java is used to declare constants, prevent method overriding, and prevent inheritance. When a variable is declared as final, its value cannot be changed once it is assigned. 
+When a method is declared as final, it cannot be overridden by subclasses. When a class is declared as final, it cannot be subclassed. The final keyword is used to ensure that certain aspects of a class or method cannot be modified, providing a level of security and stability in the code.
+
+
+static final: A static final variable is a constant that belongs to the class rather than an instance of the class. It is declared using the static and final keywords.
+
+
+java.lang.Object: The java.lang.Object class is the root class of the Java class hierarchy. It is the superclass of all classes in Java, and every class implicitly inherits from it. The Object class provides several methods that are available to all objects in Java, such as equals(), hashCode(), toString(), and clone(). These methods can be overridden by subclasses to provide specific behavior for their instances.
+java.lang.throwable: The java.lang.Throwable class is the superclass of all errors and exceptions in Java. It is the root class for all throwable objects, including both checked and unchecked exceptions. The Throwable class provides methods for getting information about the exception, such as getMessage(), getCause(), and printStackTrace(). Subclasses of Throwable include Exception and Error, which represent different types of exceptions and errors in Java.
+
+errors: Errors are serious problems that a reasonable application should not try to catch. They are typically caused by external factors such as hardware failures, memory leaks, or other system-level issues. Examples of errors include OutOfMemoryError, StackOverflowError, and VirtualMachineError.
+
+
+programming errors, such as invalid input, null pointer dereferences, or array index out of bounds. Examples of exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and IllegalArgumentException.
+
+
+Exceptions: exceptions are events that occur during the execution of a program that disrupt the normal flow of instructions. They can be caused by various factors, such as programming errors, invalid input, or external conditions. Exceptions can be handled using try-catch blocks to prevent the program from crashing and to provide a way to recover from the error.
+Types of exceptions:
+1. Checked exceptions: These are exceptions that are checked at compile-time. They must be either caught or declared in the method signature using the throws keyword. Examples of checked exceptions include IOException, SQLException, and ClassNotFoundException.
+2. Unchecked exceptions: These are exceptions that are not checked at compile-time. They do not need to be caught or declared in the method signature. Examples of unchecked exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and IllegalArgumentException.
+
+
+diff b/w try and catrtch and if else:
+1. Purpose: The try-catch block is used to handle exceptions that may occur during the execution of a program, while the if-else statement is used to control the flow of a program based on certain conditions.
+2. Syntax: The try-catch block has a specific syntax that includes the try keyword followed by a block of code that may throw an exception, and one or more catch blocks to handle specific exceptions. The if-else statement has a simpler syntax that includes 
+the if keyword followed by a condition and a block of code to execute if the condition is true, and an optional else block to execute if the condition is false.
+3. Error handling: The try-catch block is specifically designed for error handling and allows for graceful recovery from exceptions, while the if-else statement is not intended for error handling and is used for decision-making based on conditions.
+
+1.try and catch: The try-catch block is used to handle exceptions in Java. The code that may throw an exception is placed inside the try block, and the code to handle the exception is placed inside the catch block. 
+If an exception occurs in the try block, it is caught by the catch block, allowing the program to continue executing without crashing. Multiple catch blocks can be used to handle different types of exceptions, and a finally block can be added to execute code that should run regardless of whether an exception occurred or not.
+2.throw: The throw keyword is used to explicitly throw an exception in Java. It is followed by an instance of the Throwable class or its subclasses. When a throw statement is executed, the specified exception is thrown and can be caught by a corresponding catch block.
+3.throws: The throws keyword is used in a method signature to declare that the method may throw one or more exceptions. It is followed by a comma-separated list of exception types. When a method declares that it throws an exception, it indicates that the method may encounter an exceptional condition that it cannot handle, and it allows the caller of the method to handle the exception appropriately.
+4.finally: The finally block is used in conjunction with a try-catch block to specify code that should be executed regardless of whether an exception was thrown or caught. The code inside the finally block will always be executed, even if an exception is thrown and not caught. This is useful for performing cleanup operations, such as closing resources or releasing locks, that need to be executed regardless of the outcome of the try-catch block.
+5.finalize: The finalize() method is a method in the Object class that is called by the garbage collector before an object is destroyed. It is used to perform cleanup operations, such as releasing resources or closing connections, before the object is removed from memory. However, the use of finalize() is generally discouraged in modern Java programming, as it can lead to unpredictable behavior and performance issues. Instead, it is recommended to use try-with-resources or explicit resource management techniques to ensure proper cleanup of resources.
