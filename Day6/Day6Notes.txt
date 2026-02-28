@@ -1,0 +1,53 @@
+throw one exception at a time
+throws keyword is used to declare that a method may throw an exception.
+
+
+
+Grabage Collection:
+- Java uses a garbage collector to automatically manage memory.
+- The garbage collector identifies and removes objects that are no longer in use, freeing up memory for new objects.
+- The garbage collection process is typically performed in the background, allowing the program to continue running without interruption.
+- There are different algorithms for garbage collection, such as mark-and-sweep, generational, and reference counting.
+- The garbage collector can be triggered manually by calling System.gc(), but it is generally recommended to let the JVM handle it automatically.
+- It is important to be mindful of memory usage in Java, as excessive object creation can lead to increased garbage collection overhead and potential performance issues.
+- To optimize memory usage, developers can use techniques such as object pooling, reusing existing objects,and minimizing the creation of unnecessary objects.
+
+
+Ducking:
+Instead of handling an exception using try-catch, a method passes the responsibility of handling it to the calling method using throws.
+Without Ducking (Handling inside method):
+class Test {
+    void readFile() {
+        try {
+            FileReader fr = new FileReader("abc.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        }
+    }
+}
+
+With Ducking (Using throws):
+class Test {
+    void readFile() throws FileNotFoundException {
+        FileReader fr = new FileReader("abc.txt");
+    }
+}
+In the second example, the readFile method declares that it may throw a FileNotFoundException. The calling method is responsible for handling this exception, either by catching it or by further declaring it with throws. This approach allows for better separation of concerns and can make the code cleaner and more maintainable.
+
+Full example of Ducking:
+class DuckExample {
+
+    static void readFile() throws FileNotFoundException {
+        FileReader fr = new FileReader("abc.txt");
+    }
+
+    public static void main(String[] args) {
+        try {
+            readFile();
+        } catch (FileNotFoundException e) {
+            System.out.println("Handled in main");
+        }
+    }
+}
+
+
