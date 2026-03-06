@@ -1,0 +1,136 @@
+6/03/26
+
+Searching Algorithms:
+1. Linear Search:
+2. Binary Search:
+
+3. Jump Search: 
+-Compromised b/w linear and binary
+-Used on Sorted Array
+-Used on regular set of value (Avoid irregular)
+-TC: O(root(n))
+-SC: O(1)
+
+Ex:
+arr = [1,2,3,4,5,6,7,8,9]
+key = 5
+Step 1: Jump by root(n) = 3
+Step 2: Check if key is in the range [3,6]
+Step 3: If not found, linearly search in the range [3,6]    
+
+4.Interpolation Search:
+-Used on Sorted Array
+-Used on regular set of value (Avoid irregular)
+-TC: O(log log n) best case, O(n) worst case
+-SC: O(1)
+Ex:
+arr = [1,2,3,4,5,6,7,8,9]
+key = 5
+Step 1: Calculate the position using interpolation formula
+pos = low + ((high - low) / (arr[high] - arr[low])) * (key - arr[low])
+pos = 0 + ((8 - 0) / (9 - 1)) * (5 - 1) = 4
+Step 2: Check if key is at pos 4
+Step 3: If not found, adjust low or high based on the value at pos and repeat the process until key is found or low exceeds high
+
+Sorting Algorithms:
+1. Bubble Sort: 
+-Compares adjacent elements and swaps them if they are in the wrong order
+-TC: O(n^2)
+-SC: O(1)
+
+2. Selection Sort:
+-Finds the minimum element from the unsorted part and places it at the beginning
+-TC: O(n^2)
+-SC: O(1)
+
+3. Insertion Sort:
+-Builds the sorted array one item at a time by repeatedly taking the next item and inserting it into the correct position
+-TC: O(n^2) 
+-SC: O(1)
+
+
+
+Collections: 
+collections is root interface in the collection hierarchy. It has three main subinterfaces: List, Set, and Queue.
+Interface: List
+-Ordered collection (also known as a sequence)
+
+1. ArrayList:
+-Resizable array implementation of the List interface
+-Allows duplicate elements
+-Allows null elements
+
+2. LinkedList:
+-Doubly linked list implementation of the List and Deque interfaces
+-Allows duplicate elements
+-Allows null elements
+
+3. Vector:
+-Resizable array implementation of the List interface
+-Synchronized (thread-safe)
+-Allows duplicate elements
+
+4. Stack:
+-Last In First Out (LIFO) data structure
+-Extends Vector class
+-Provides methods like push(), pop(), peek(), etc.
+
+Interface: Set
+-Collection that does not allow duplicate elements
+1. HashSet:
+-Hash table implementation of the Set interface
+-Does not maintain any order
+-Allows null elements
+
+2. LinkedHashSet:
+-Hash table and linked list implementation of the Set interface
+-Maintains insertion order
+-Allows null elements
+
+3. TreeSet:
+-Red-Black tree implementation of the Set interface
+-Maintains sorted order
+-Does not allow null elements
+-Removes duplicates and sorts the elements in natural order or according to a specified comparator
+
+Interface:Queue
+-Collection used to hold multiple elements prior to processing
+1. LinkedList:
+-Can be used as a Queue implementation  
+-Provides methods like offer(), poll(), peek(), etc.
+2. PriorityQueue:
+-Heap-based implementation of the Queue interface
+-Elements are ordered according to their natural ordering or by a specified comparator
+-Does not allow null elements
+3. ArrayDeque:
+-Resizable array implementation of the Deque interface
+-Can be used as a Queue implementation
+-Provides methods like offer(), poll(), peek(), etc.
+
+Interface: Deque
+-Double Ended Queue, allows insertion and removal of elements from both ends
+1. LinkedList:
+-Can be used as a Deque implementation
+-Provides methods like offerFirst(), offerLast(), pollFirst(), pollLast(), peekFirst(), peekLast(), etc.
+2. ArrayDeque:
+-Resizable array implementation of the Deque interface
+-Provides methods like offerFirst(), offerLast(), pollFirst(), pollLast(), peekFirst(), peekLast(), etc.
+
+
+
+interface MAP
+-Collection that maps keys to values, where each key is unique and maps to a single value
+1. HashMap:
+-Hash table implementation of the Map interface
+-Does not maintain any order
+-Allows null keys and null values
+
+2. LinkedHashMap:
+-Hash table and linked list implementation of the Map interface
+-Maintains insertion order
+-Allows null keys and null values
+
+3. TreeMap:
+-Red-Black tree implementation of the Map interface
+-Maintains sorted order of keys
+-Does not allow null keys but allows null values
