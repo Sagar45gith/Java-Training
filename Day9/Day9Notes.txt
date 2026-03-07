@@ -1,0 +1,39 @@
+Collection  is a class that represents a group of objects. It provides methods to add, remove, and manipulate the objects in the collection. Collections can be used to store and manage data in various ways, such as lists, sets, and maps. They are commonly used in programming languages to organize and handle data efficiently.
+Collections can be implemented using different data structures, such as arrays, linked lists, or hash tables, depending on the specific requirements of the application. They often provide features like sorting, searching, and filtering to facilitate data management. In many programming languages, collections are part of the standard library and offer built-in functionality for common operations.
+Some common types of collections include: lists, sets, and maps.
+
+--------------------------------
+
+1.Iterable is the root interface for all collection types in many programming languages. It defines a method that allows you to obtain an iterator, which can be used to traverse the elements of the collection. An iterable collection can be used in a for-each loop or any other context that requires iteration.
+2.Oblects is the root class for all objects in many programming languages. It provides basic methods that are inherited by all other classes, such as equals(), hashCode(), and toString(). The Object class serves as a base for creating custom classes and allows for polymorphism, where objects of different classes can be treated as instances of the Object class.
+
+-------------------------------------
+
+ArrayList and linked list:
+
+Array list                                                            Linked list
+- Uses a dynamic array to store elements.                             - Uses a linked list data structure to store elements.
+- Provides fast random access to elements.                            - Provides fast insertion and deletion of elements.
+- Resizes the array when it reaches capacity.                         - Does not require resizing as it uses nodes to store elements.
+- Requires contiguous memory allocation.                              - Does not require contiguous memory allocation.
+- Generally faster for accessing elements by index.                   - Generally slower for accessing elements by index.
+- Better for scenarios where frequent access to elements is required. - Better for scenarios where frequent insertion and deletion of elements is required.
+
+
+---------------------------------------
+HASHINGG:
+hashing is a technique which is used to store and retrive data using a hashkey(index).
+HASHKEY = key % size of hash table
+Ex: tablesize 10, key = 1234
+hashkey = 1234 % 10 = 4
+So the data will be stored at index 4 in the hash table.
+
+Collision: when two keys generate the same hashkey. it leads to data loss. To avoid this we use chaining and open addressing.
+
+Collisoion resolution techniques:
+
+1. Seprate chaining:(Usingg linked list): we create a linkedlist on index of an array when collison occurs and store the data in the linked list.
+2. Open Addressing: 
+- Linear Probing: we check the next index for empty slot when collision occurs.
+- Quadratic Probing: we check the next index using a quadratic function when collision occurs.
+- Double Hashing: we use a second hash function to calculate the next index when collision occurs.
