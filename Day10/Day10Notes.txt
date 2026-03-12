@@ -1,0 +1,15 @@
+Recurssion:
+- A function that calls itself is called a recursive function.
+- A recursive function must have a base case that stops the recursion, otherwise it will continue indefinitely and cause a stack overflow.
+- The base case is the condition under which the function will stop calling itself and return a value.
+- Recursive functions can be used to solve problems that can be broken down into smaller, similar subproblems, such as calculating the factorial of a number or traversing a tree data structure.
+Example of a recursive function to calculate the factorial of a number:
+
+
+Types of Recurssion:
+1. Direct Recursion: A function that calls itself directly.
+2. Indirect Recursion: A function that calls another function, which in turn calls the original function.
+3. Tail Recursion: A recursive function where the recursive call is the last operation performed in the function.
+4. Head Recursion: A recursive function where the recursive call is the first operation performed in the function.
+5. Tree Recursion: A recursive function that makes multiple recursive calls within the same function, creating a tree-like structure of calls.
+6. LINEAR Recursion: A recursive function that makes only one recursive call within the function, creating a linear structure of calls.
