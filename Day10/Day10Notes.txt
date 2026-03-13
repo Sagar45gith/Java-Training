@@ -13,3 +13,33 @@ Types of Recurssion:
 4. Head Recursion: A recursive function where the recursive call is the first operation performed in the function.
 5. Tree Recursion: A recursive function that makes multiple recursive calls within the same function, creating a tree-like structure of calls.
 6. LINEAR Recursion: A recursive function that makes only one recursive call within the function, creating a linear structure of calls.
+
+
+
+12/3/26
+LL Questions:
+2,19,21,23,24,25,61,82,83.
+
+
+Did:
+Floyd, isCircular, findmiddle, reverse, removeduplicates.
+josephus, splitlist.
+
+Circular Linked List:
+- A circular linked list is a linked list where the last node points back to the first node, creating a circular structure.
+- In a circular linked list, there is no null pointer at the end of the list, and it can be traversed indefinitely.
+
+STACKKKKKKKK:
+- A stack is a linear data structure that follows the Last In First Out (LIFO) principle, where the last element added to the stack is the first one to be removed.
+- A stack can be implemented using an array or a linked list.
+
+Operations on Stack:
+1. Push: Adding an element to the top of the stack.
+2. Pop: Removing the top element from the stack.
+3. Peek: Viewing the top element of the stack without removing it.
+4. isEmpty: Checking if the stack is empty.
+5. size: Getting the number of elements in the stack.
+
+Stack<Integer> stack = new Stack<>();
+stack.push(10); // Pushes 10 onto the stack
+
