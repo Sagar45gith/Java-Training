@@ -1,0 +1,41 @@
+
+Stack:
+LC: 150, 155, 496, 232, 225 (implement a stack using queues) 
+
+Queue:
+- A queue is a linear data structure that follows the First In First Out (FIFO) principle, where the first element added to the queue is the first one to be removed.
+- A queue can be implemented using an array or a linked list.
+Types of Queue:
+1.Linear Queue: A linear queue is a simple implementation of a queue where elements are added at the rear and removed from the front. It has a fixed size and can lead to inefficient use of space if elements are removed from the front.
+2.Circular Queue: A circular queue is an improved version of a linear queue where the last position is connected back to the first position, forming a circle. It allows for efficient use of space by reusing the positions of removed elements.
+3.Priority Queue: A priority queue is a type of queue where each element is associated with a priority. Elements with higher priority are removed before elements with lower priority.
+4.Double Ended Queue (Deque): A double-ended queue, or deque, is a type of queue where elements can be added or removed from both the front and the rear. It allows for more flexible operations compared to a standard queue.
+
+Queue<Integer> queue = new LinkedList<>(); or Queue<Integer> queue = new ArrayDeque<>();
+queue.offer(10); // Adds 10 to the rear of the queue
+
+
+Operations on Queue:
+- Offer(Enqueue): Adding an element to the rear of the queue.
+- Poll(Dequeue): Removing an element from the front of the queue.
+- Peek(Front): Accessing the element at the front of the queue.
+- Back(Rear): Accessing the element at the rear of the queue.
+- IsEmpty: Checking if the queue is empty.
+- IsFull: Checking if the queue is full (in case of a fixed-size queue).
+
+
+BINARYY TREES:
+- A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child.
+- A binary tree can be used to represent hierarchical data and is commonly used in various applications such as expression parsing, searching, and sorting.
+
+Tree traversal:
+1.DFS (Depth First Search): In DFS, we explore as far as possible along each branch before backtracking.
+-Preorder Traversal: Visit the root node first, then recursively visit the left subtree, followed by the right subtree.
+-Inorder Traversal: Recursively visit the left subtree first, then visit the root node, followed by the right subtree.
+-Postorder Traversal: Recursively visit the left subtree first, then the right subtree, and finally visit the root node.
+2.BFS (Breadth First Search): In BFS, we explore all the neighbors at the present depth before moving on to the nodes at the next depth level.
+
+
+next greater
+dailt temp
+remove nth node from end of list
