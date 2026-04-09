@@ -1,0 +1,35 @@
+Binary Search Tree
+Rule 1 for BST:
+BST should be a Binary tree.
+
+Rule 2 for BST:
+left node<root node<right node
+
+8,6,5,10,12,20,31
+
+
+-------------
+Heap:-
+complete binary tree
+the child nodes are either greater than or less than the parent node
+Max Heap: the child nodes are less than the parent node
+Min Heap: the child nodes are greater than the parent node.
+
+in java we can use PriorityQueue class to implement a min heap and for max heap we can use Collections.reverseOrder() method.
+by default PriorityQueue in Java implements a min heap. To create a max heap, you can use the following code:
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+maxHeap.offer(10); // Adds 10 to the max heap
+
+
+
+--------
+Trie:
+Trie data structure consists of nodes connected by edges.
+Each node represents a character or a part of a string.
+The root node acts as a starting point and does not store any character.
+
+
+-----------
+Segment tree:
+Used for range queries and updates on an array.
+
