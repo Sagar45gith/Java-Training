@@ -1,0 +1,50 @@
+DP:
+Dp is used to solve problems by breaking them into smaller subproblems/overlapping problems and storing there results.
+
+Two approaches:
+
+1. Memoization (Top down approach):
+    - We start with the original problem and break it down into smaller subproblems until we reach the base case.
+    - We store the results of the subproblems in a memoization table to avoid redundant calculations.
+    - This approach is also known as memoization.
+
+2. Tabulation (Bottom up approach):
+    - We start with the base case and build up the solution to the original problem by solving smaller subproblems first.
+    - We store the results of the subproblems in a tabulation table to avoid redundant calculations.
+    - This approach is also known as tabulation.
+
+
+Memorization example: fibonacci number:
+
+int fib(int n, int[] dp){
+    if(n <= 1) return n;
+    if(dp[n] != -1) return dp[n];
+    return dp[n] = fib(n-1,dp) + fib(n-2,dp);
+}
+
+Tabulation example: fibonacci number:
+
+int fib(int n){
+    int[] dp = new int[n+1];
+    dp[0] = 0;
+    dp[1] = 1;
+    for(int i=2; i<=n; i++){
+        dp[i] = dp[i-1] + dp[i-2];
+    }
+    return dp[n];
+}
+
+
+
+
+Lambda function:
+A lambda fn replace ananymous function.
+
+List<Integer> list = Arrays.asList(5,2,8,1);
+list.sort((a,b) -> a-b); // ascending order
+System.out.println(list); // [1,2,5,8]
+
+the - is used to compare two integers a and b. 
+If a is less than b, it returns a negative value, which indicates that a should come before b in the sorted order.
+If a is greater than b, it returns a positive value, which indicates that a should come after b in the sorted order.
+If a is equal to b, it returns 0, which indicates that the order of a and b does not matter in the sorted order.
